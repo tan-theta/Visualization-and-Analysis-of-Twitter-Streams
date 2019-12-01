@@ -2,7 +2,7 @@
 
 var drawBar14 = function(selectedState){
     d3.select("#bar-chart").selectAll("*").remove();
-  d3.csv('~/data/USA/Hour_14.csv').then(function(data) {
+  d3.csv('data/USA/Hour_14.csv').then(function(data) {
 
         data = data.filter(function(d) {
         return (d["State"]==selectedState);
@@ -130,7 +130,7 @@ drawBar14("USA");
 
 var drawBar15 = function(selectedState){
     d3.select("#bar-chart").selectAll("*").remove();
-  d3.csv('~/data/USA/Hour_15.csv').then(function(data) {
+  d3.csv('data/USA/Hour_15.csv').then(function(data) {
 
         data = data.filter(function(d) {
         return (d["State"]==selectedState);
@@ -256,7 +256,7 @@ var margin = {top: 20, right: 30, bottom: 50, left: 50},
 
 var drawBar16 = function(selectedState){
     d3.select("#bar-chart").selectAll("*").remove();
-  d3.csv('~/data/USA/Hour_16.csv').then(function(data) {
+  d3.csv('data/USA/Hour_16.csv').then(function(data) {
 
         data = data.filter(function(d) {
         return (d["State"]==selectedState);

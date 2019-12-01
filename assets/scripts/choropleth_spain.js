@@ -26,7 +26,7 @@ var map_spain = d3.choropleth()
 console.log(d3.select(".units"));
 console.log(d3.select("rect").selectAll("g"));
 
-d3.csv('~/data/SPAIN/data_spain.csv').then(data => {
+d3.csv('data/SPAIN/data_spain.csv').then(data => {
     map_spain.draw(d3.select("#map_spain").datum(data));
 });
 
@@ -52,7 +52,7 @@ var redraw = function(selectedDate){
 
     
     
-d3.csv('~/data/SPAIN/data_spain.csv').then(data => {
+d3.csv('data/SPAIN/data_spain.csv').then(data => {
     map_spain.draw(d3.select("#map_spain").datum(data));
 });
 };

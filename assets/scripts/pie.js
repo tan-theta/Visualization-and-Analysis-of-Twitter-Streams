@@ -1,5 +1,5 @@
 
-d3.csv('~/data/USA/clean_dataset.csv').then(function(data) {
+d3.csv('data/USA/clean_dataset.csv').then(function(data) {
    
 //    var selectedPlace = "New York";
     var selectedDateStart = "14";
@@ -272,7 +272,7 @@ d3.select("#pie").selectAll("path")
 var drawPieUSA = function(selectedDateStart){
     d3.select("#pie").selectAll("*").remove();
     
-d3.csv('~/data/USA/clean_dataset.csv').then(function(data) {
+d3.csv('data/USA/clean_dataset.csv').then(function(data) {
    
 //    var selectedPlace = "New York";
 //    var selectedDateStart = "14";
@@ -477,7 +477,7 @@ var drawPie = function(selectedPlace,selectedDateStart){
 //    console.log(selectedDateStart);
 //    console.log(selectedPlace);
     
-d3.csv('~/data/USA/clean_dataset.csv').then(function(data) {
+d3.csv('data/USA/clean_dataset.csv').then(function(data) {
    
 //    var selectedPlace = selectedPlace;
 //    var selectedDateStart = selectedDateStart;
