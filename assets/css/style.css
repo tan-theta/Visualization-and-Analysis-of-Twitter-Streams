@@ -49,11 +49,11 @@ body{
 
 #slider-step .tick text{
     fill : white;
-    font-size : 1.5em;
+    font-size : 1em;
 }
 
 #slider-step text{
-    font-size: 1.8em;
+    font-size: 1.2em;
 }
 .parameter-value text{
     fill : black;
