@@ -77,6 +77,37 @@ table.darkTable tfoot td {
 
 </style>
     
+    <style type="text/css">
+		.feature {
+			fill: none;
+			stroke: grey;
+			stroke-width: 1px;
+			stroke-linejoin: round;
+		}
+		.mesh {
+			fill: none;
+			stroke: lightgrey;
+			stroke-width: 2px;
+			stroke-linejoin: round;
+		}
+		h1 {
+			font-family: sans-serif;
+		}
+
+		.center {
+			margin: auto;
+			padding: 10px;
+			width : 60%;
+			height: 50%;
+		}
+
+		h1{
+			font-family: 'Raleway', sans-serif;
+			font-weight: 700;
+		}
+
+	</style>
+    
     
     <script type="text/javascript">
         //using document ready...
@@ -184,7 +215,7 @@ table.darkTable tfoot td {
                 </div>
                 <div>
                 
-                    <h3>Extension</h3>
+                    <h3><a href="us_map.html" target="_blank">Extension</a></h3>
                 </div>
                 <div id="switching">
                 
@@ -257,20 +288,43 @@ table.darkTable tfoot td {
         
     </div>
     
+<!--
     <div id="usa_extension" class="section">
-    
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <p style="text-align: center; color: white;font-variant:small-caps ">Sentiment Analysis</p> 
+            </div>
+        
+        <div class="container-fluid">
+		<div class="col-lg-12">
+			<div class ="center" id="svgDiv"></div>
+
+			<div class="col-lg-12">
+				<div class = "center" id="pieDiv"></div>
+			</div>
+		</div>
+        </div>
+        
     </div>
+-->
     
         
         
         
 </div>
+    
+    <script type="text/javascript">
+
+	
+
+
+</script>
 
 
 <script src="https://d3js.org/d3.v5.min.js"></script>
 <script src="https://unpkg.com/d3-simple-slider"></script>
 <!--<script src="//unpkg.com/d3@5.9.2/dist/d3.min.js"></script>-->
     <script src="//unpkg.com/topojson@3.0.2/dist/topojson.min.js"></script>
+<!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>  -->
 
 <script src="assets/scripts/d3-geomap.js"></script>
 <!--<script src="assets/d3cloud.js"></script>-->
@@ -283,6 +337,7 @@ table.darkTable tfoot td {
 <script src="assets/scripts/hashtag_data.js"></script>
 <script src="assets/scripts/word-cloud.js"></script>
 <script src="assets/scripts/process.js"></script>
+<!--<script src="us_extension.js"></script>-->
     
     
 </body>
