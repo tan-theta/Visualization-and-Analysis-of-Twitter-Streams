@@ -78,7 +78,8 @@ d3.csv('data/SPAIN/spain_clean_dataset.csv').then(function(data) {
     dataset.push({label: "Turkish",count: countTR});
 // console.log(dataset);
 
-var color = d3.scaleOrdinal(["#ec6416","#e2cf56","#8A56E2","#e2cf56","#68e256","#e25668","#56aee2","#e256ae","#aee256","#5668e2","#5668e2","#643409","#08e288","#61033f"]);
+//var color = d3.scaleOrdinal(["#ec6416","#e2cf56","#8A56E2","#e2cf56","#68e256","#e25668","#56aee2","#e256ae","#aee256","#5668e2","#5668e2","#643409","#08e288","#61033f"]);
+    var color = d3.scaleOrdinal(["#ec6416","#e2cf56","#8A56E2","#e6194B","#68e256","#9A6324","#56aee2","#e256ae","#000000","#e6beff","rgb(147, 130, 15)","#643409","#08e288","#61033f"]);
 var pieDiv = document.getElementById("pie-container_spain");
 //console.log(pieDiv.clientHeight);
 
@@ -360,7 +361,9 @@ d3.csv('data/SPAIN/spain_clean_dataset.csv').then(function(data) {
     dataset.push({label: "Turkish",count: countTR});
 // console.log(dataset);
 
-var color = d3.scaleOrdinal(["#ec6416","#e2cf56","#8A56E2","#e2cf56","#68e256","#e25668","#56aee2","#e256ae","#aee256","#5668e2","#5668e2","#643409","#08e288","#61033f"]);
+//var color = d3.scaleOrdinal(["#ec6416","#e2cf56","#8A56E2","#e2cf56","#68e256","#e25668","#56aee2","#e256ae","#aee256","#5668e2","#5668e2","#643409","#08e288","#61033f"]);
+    var color = d3.scaleOrdinal(["#ec6416","#e2cf56","#8A56E2","#e6194B","#68e256","#9A6324","#56aee2","#e256ae","#000000","#e6beff","rgb(147, 130, 15)","#643409","#08e288","#61033f"]);
+    
 var pieDiv = document.getElementById("pie-container_spain");
 //console.log(pieDiv.clientHeight);
 var pieWidth = document.documentElement.clientWidth/4;
@@ -586,7 +589,9 @@ d3.csv('data/SPAIN/spain_clean_dataset.csv').then(function(data) {
     dataset.push({label: "Turkish",count: countTR});
 //console.log(dataset);
     
-var color = d3.scaleOrdinal(["#ec6416","#e2cf56","#8A56E2","08e288","#e2cf56","#68e256","#e25668","#56aee2","#e256ae","#aee256","#5668e2","#5668e2","#643409","#08e288","#61033f"]);
+//var color = d3.scaleOrdinal(["#ec6416","#e2cf56","#8A56E2","08e288","#e2cf56","#68e256","#e25668","#56aee2","#e256ae","#aee256","#5668e2","#5668e2","#643409","#08e288","#61033f"]);
+    var color = d3.scaleOrdinal(["#ec6416","#e2cf56","#8A56E2","#e6194B","#68e256","#9A6324","#56aee2","#e256ae","#000000","#e6beff","rgb(147, 130, 15)","#643409","#08e288","#61033f"]);
+    
 var pieDiv = document.getElementById("pie-container_spain");
 //console.log(pieDiv.clientHeight);
 var pieWidth = document.documentElement.clientWidth/4;

@@ -78,7 +78,9 @@ d3.csv('data/USA/clean_dataset.csv').then(function(data) {
     dataset.push({label: "Turkish",count: countTR});
 // console.log(dataset);
 
-var color = d3.scaleOrdinal(["#ec6416","#e2cf56","#8A56E2","#e2cf56","#68e256","#e25668","#56aee2","#0080ff","#aee256","#5668e2","#adb0c1","#643409","#08e288","#61033f"]);
+//var color = d3.scaleOrdinal(["#ec6416","#e2cf56","#8A56E2","#e2cf56","#68e256","#e25668","#56aee2","#0080ff","#aee256","#5668e2","#adb0c1","#643409","#08e288","#61033f"]);
+    var color = d3.scaleOrdinal(["#ec6416","#e2cf56","#8A56E2","#e6194B","#68e256","#9A6324","#56aee2","#e256ae","#000000","#e6beff","rgb(147, 130, 15)","#643409","#08e288","#61033f"]);
+    
 var pieDiv = document.getElementById("pie-container");
 //console.log(pieDiv.clientHeight);
 
@@ -351,7 +353,11 @@ d3.csv('data/USA/clean_dataset.csv').then(function(data) {
     dataset.push({label: "Turkish",count: countTR});
 // console.log(dataset);
 
-var color = d3.scaleOrdinal(["#ec6416","#e2cf56","#8A56E2","#e2cf56","#68e256","#e25668","#56aee2","#e256ae","#aee256","#5668e2","#5668e2","#643409","#08e288","#61033f"]);
+var color = d3.scaleOrdinal(["#ec6416","#e2cf56","#8A56E2","#e6194B","#68e256","#9A6324","#56aee2","#e256ae","#000000","#e6beff","rgb(147, 130, 15)","#643409","#08e288","#61033f"]);
+//    
+//   [ #e6194B, #3cb44b, #ffe119, #4363d8, #f58231, #911eb4, #42d4f4, #f032e6, #bfef45, #fabebe, #469990, #e6beff, #9A6324, #fffac8, #800000, #aaffc3, #808000, #ffd8b1, #000075, #a9a9a9, #ffffff, #000000 ];
+    
+    
 var pieDiv = document.getElementById("pie-container");
 //console.log(pieDiv.clientHeight);
 var pieWidth = document.documentElement.clientWidth/4;
@@ -569,7 +575,9 @@ d3.csv('data/USA/clean_dataset.csv').then(function(data) {
     dataset.push({label: "Turkish",count: countTR});
 //console.log(dataset);
     
-var color = d3.scaleOrdinal(["#ec6416","#e2cf56","#8A56E2","08e288","#e2cf56","#68e256","#e25668","#56aee2","#e256ae","#aee256","#5668e2","#5668e2","#643409","#08e288","#61033f"]);
+//var color = d3.scaleOrdinal(["#ec6416","#e2cf56","#8A56E2","08e288","#e2cf56","#68e256","#e25668","#56aee2","#e256ae","#aee256","#5668e2","#5668e2","#643409","#08e288","#61033f"]);
+    var color = d3.scaleOrdinal(["#ec6416","#e2cf56","#8A56E2","#e6194B","#68e256","#9A6324","#56aee2","#e256ae","#000000","#e6beff","rgb(147, 130, 15)","#643409","#08e288","#61033f"]);
+    
 var pieDiv = document.getElementById("pie-container");
 //console.log(pieDiv.clientHeight);
 var pieWidth = document.documentElement.clientWidth/4;
