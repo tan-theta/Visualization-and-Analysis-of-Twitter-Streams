@@ -56,6 +56,9 @@ var margin = {top: 20, right: 30, bottom: 50, left: 50},
 
     x.domain(data1.map( d => { return d.key; }));
     var max = d3.max(data1, function(d) { return +d.value;} );
+      if(max==0) { 
+    return; //stop the execution of function
+}
     y.domain([0,max]);
     svg.append("g")
         .style("font-size","0.8em")
@@ -135,7 +138,7 @@ var drawBar15_spain = function(selectedState){
         data = data.filter(function(d) {
         return (d["State"]==selectedState);
     });
-    
+      
 //   console.log(data);
      
 //    console.log(data);
@@ -183,7 +186,9 @@ var margin = {top: 20, right: 30, bottom: 50, left: 50},
 
 
     x.domain(data1.map( d => { return d.key; }));
-    var max = d3.max(data1, function(d) { return +d.value;} );
+    var max = d3.max(data1, function(d) { return +d.value;} );              if (max==0){           return;       }
+      
+      
     y.domain([0,max]);
     svg.append("g")
         .style("font-size","0.8em")
@@ -309,7 +314,7 @@ var margin = {top: 20, right: 30, bottom: 50, left: 50},
 
 
     x.domain(data1.map( d => { return d.key; }));
-    var max = d3.max(data1, function(d) { return +d.value;} );
+    var max = d3.max(data1, function(d) { return +d.value;} );              if (max==0){           return;       }
     y.domain([0,max]);
     svg.append("g")
         .style("font-size","0.8em")
@@ -435,7 +440,7 @@ var margin = {top: 20, right: 30, bottom: 50, left: 50},
 
 
     x.domain(data1.map( d => { return d.key; }));
-    var max = d3.max(data1, function(d) { return +d.value;} );
+    var max = d3.max(data1, function(d) { return +d.value;} );              if (max==0){           return;       }
     y.domain([0,max]);
     svg.append("g")
         .style("font-size","0.8em")
@@ -561,7 +566,7 @@ var margin = {top: 20, right: 30, bottom: 50, left: 50},
 
 
     x.domain(data1.map( d => { return d.key; }));
-    var max = d3.max(data1, function(d) { return +d.value;} );
+    var max = d3.max(data1, function(d) { return +d.value;} );              if (max==0){           return;       }
     y.domain([0,max]);
     svg.append("g")
         .style("font-size","0.8em")
@@ -687,7 +692,7 @@ var margin = {top: 20, right: 30, bottom: 50, left: 50},
 
 
     x.domain(data1.map( d => { return d.key; }));
-    var max = d3.max(data1, function(d) { return +d.value;} );
+    var max = d3.max(data1, function(d) { return +d.value;} );              if (max==0){           return;       }
     y.domain([0,max]);
     svg.append("g")
         .style("font-size","0.8em")
@@ -813,7 +818,7 @@ var margin = {top: 20, right: 30, bottom: 50, left: 50},
 
 
     x.domain(data1.map( d => { return d.key; }));
-    var max = d3.max(data1, function(d) { return +d.value;} );
+    var max = d3.max(data1, function(d) { return +d.value;} );              if (max==0){           return;       }
     y.domain([0,max]);
     svg.append("g")
         .style("font-size","0.8em")
@@ -939,7 +944,7 @@ var margin = {top: 20, right: 30, bottom: 50, left: 50},
 
 
     x.domain(data1.map( d => { return d.key; }));
-    var max = d3.max(data1, function(d) { return +d.value;} );
+    var max = d3.max(data1, function(d) { return +d.value;} );              if (max==0){           return;       }
     y.domain([0,max]);
     svg.append("g")
         .style("font-size","0.8em")
@@ -1063,7 +1068,7 @@ var margin = {top: 20, right: 30, bottom: 50, left: 50},
 
 
     x.domain(data1.map( d => { return d.key; }));
-    var max = d3.max(data1, function(d) { return +d.value;} );
+    var max = d3.max(data1, function(d) { return +d.value;} );              if (max==0){           return;       }
     y.domain([0,max]);
     svg.append("g")
         .style("font-size","0.8em")
