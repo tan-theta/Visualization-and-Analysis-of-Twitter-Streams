@@ -78,7 +78,7 @@ d3.csv('data/USA/clean_dataset.csv').then(function(data) {
     dataset.push({label: "Turkish",count: countTR});
 // console.log(dataset);
 
-var color = d3.scaleOrdinal(["#ec6416","#e2cf56","#8A56E2","#e2cf56","#68e256","#e25668","#56aee2","#e256ae","#aee256","#5668e2","#5668e2","#643409","#08e288","#61033f"]);
+var color = d3.scaleOrdinal(["#ec6416","#e2cf56","#8A56E2","#e2cf56","#68e256","#e25668","#56aee2","#0080ff","#aee256","#5668e2","#adb0c1","#643409","#08e288","#61033f"]);
 var pieDiv = document.getElementById("pie-container");
 //console.log(pieDiv.clientHeight);
 
