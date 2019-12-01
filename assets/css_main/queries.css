@@ -1,0 +1,271 @@
+
+
+
+@media only screen and (min-width: 1200px) {
+
+    body { font-size: 18px; }
+    h1{
+        font-size: 50px;
+        
+    
+    }
+    h2{
+       line-height: 1.5em;
+        font-size: 25px;
+    }
+    
+    #home {
+        padding-top: 35px;
+    }
+    
+    #workshop-header {
+    padding-top: 50px;
+    }
+    
+
+}
+
+
+/* Big tablet to 1200px (widths smaller taht the 1140px row) */
+@media only screen and (max-width: 1200px) {
+
+    body { font-size: 17px; }
+    h1{
+        font-size: 40px;
+    
+    }
+    h2{
+       line-height: 1.5em;
+        font-size: 1.3 em;
+    }
+    
+    #home{
+        padding-top: 35px;
+    }
+    
+    .padding {
+        padding-right: 30px;
+        padding-bottom: 10px;
+        
+    }
+    
+    #workshop-header {
+    padding-top: 50px;
+    }
+}
+
+    
+
+/* Small tablet to big tablet: from 768px to 1023px */
+@media only screen and (max-width: 1023px) {
+    body { font-size: 16px; }
+    h1{
+        font-size: 35px;
+    }
+    
+    h2{
+        font-size: 20px;
+        line-height: 1.5em;
+    }
+    #home {
+        padding-top: 50px;
+    }
+    
+    .padding {
+        padding-right: 30px;
+        padding-bottom: 10px;
+        
+    }
+    
+    #workshop-header {
+    padding-top: 50px;
+    }
+    
+    .plot {
+     display: inherit;
+    align-items: baseline;
+    justify-content: default;
+}
+}
+    
+
+/* Small phones to small tablets: from 481px to 767px */
+@media only screen and (max-width: 767px) {
+    body { font-size: 14px; }   
+    h1 {font-size: 28px;
+    line-height: 1.5em;
+    }
+    h2{
+        font-size: 18px;
+        line-height: 1.3em;
+    }
+    
+    .header-text>h2{
+    font-size: 34px;
+    color: #f3d9b4;
+    font-variant: small-caps;
+    letter-spacing: 5px;
+    line-height: 50px;
+}
+    .header-text>h3{
+    font-size: 25px;
+    
+}
+    .header-text>h4{
+    font-size: 35px;
+    letter-spacing: 5px;
+    line-height: 60px;
+}
+    .header-button{
+    
+    padding: 10px; 
+    letter-spacing: 5px;
+    text-indent: 5px;
+    
+}
+    .scroll-down {
+   
+    line-height: 70px;
+    
+}
+    
+    
+   .resize {
+    max-height: 50px;
+    
+}
+    
+    
+    #about {
+        padding-top: 30px;
+    }
+    
+#dataset,#treemap,#scatter,#bubble {
+        padding-top: 30px;
+        
+    }
+    
+    #sponsors{
+        padding-top: 30px;
+    }
+    .section-question {
+   
+	padding-top: 30px;
+    
+}
+    #team {
+        padding-top: 30px;
+    }
+    
+    .padding {
+        padding-right: 0px;
+        padding-bottom: 10px;
+        
+    }
+    
+    #workshop-header {
+    padding-top: 50px;
+    }
+.plot {
+     display: inherit;
+    align-items: baseline;
+    justify-content: default;
+}
+  
+    .img-treemap {
+        max-height: 100%;
+        max-width: 100%;
+    }
+}
+
+
+
+
+
+/* Small phones: from 0 to 480px */
+@media only screen and (max-width: 480px) {
+    body { font-size: 13px; }
+    h1{
+        font-size: 24px;        
+    }
+    h2{
+        font-size: 15px;
+        line-height: 1.5em;
+        letter-spacing: 1px;
+    }
+    
+    header{
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/landing-image-mobile.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/landing-image-mobile.jpg);
+    }
+    
+       .header-text>h2{
+    font-size: 20px;
+    color: #f3d9b4;
+    font-variant: small-caps;
+    letter-spacing: 3px;
+    line-height: 20px;
+}
+    .header-text>h3{
+    font-size: 15px;
+    
+}
+    .header-text>h4{
+    font-size: 20px;
+    letter-spacing: 3px;
+    line-height: 20px;
+}
+    .header-button{
+    margin-top: 10px;
+    padding: 5px; 
+    letter-spacing: 3px;
+    text-indent: 5px;
+    
+}
+    .scroll-down {
+   
+    line-height: 70px;
+    
+}
+    
+    hr:before {
+        width: 50px;
+    }
+    .resize {
+    max-height: 50px;
+    max-width: 200px;
+}
+    #home{
+        padding-top: 50px;
+        
+    }
+    
+    #workshop-header {
+    padding-top: 50px;
+    }
+    
+    .heading {
+    margin: 15px;
+}
+    .bold{
+        letter-spacing: 5px;
+    }
+    
+    .forms{
+        padding: 0;
+        
+    
+    }
+    
+    .plot {
+     display: inherit;
+    align-items: baseline;
+    justify-content: default;
+}
+    
+}
+
+
+
+
+

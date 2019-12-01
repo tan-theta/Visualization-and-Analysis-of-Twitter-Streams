@@ -1,0 +1,401 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>US States Choropleth</title>
+    
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="assets/css/d3-geomap.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" /> 
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Lemonada|Raleway|Cookie|Great+Vibes|Handlee|Tangerine" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="sliding-navbar.css">
+    
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+    
+    
+    <!--  End karmatek code-->
+
+    <link rel="stylesheet" type="text/css" href="assets/css/fullpage.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/examples.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/fullpage.js"></script>
+
+    <style>
+    .sidepanel  {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 1.5;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  font-variant: small-caps;
+}
+
+.sidepanel h3{
+padding-bottom: 0.5em;
+     text-decoration: none;
+  font-size: 1.5em;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  font-variant: small-caps;
+    
+        }        
+.sidepanel h3:hover {
+  color: #f1f1f1;
+}
+        
+.sidepanel p{
+   padding-bottom: 1em;
+     text-decoration: none;
+  font-size: 1em;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  font-variant: small-caps;         
+        }
+        
+   .sidepanel p:hover {
+  color: #f1f1f1;
+}     
+        
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 20px;
+}
+        
+.control-bar{
+
+    background-color: #000;
+    width: 100vw;
+    padding: 0.45em;
+    margin-top: 0px;
+    margin-bottom: 1em;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+        
+.control-bar:not(p) .openbtn:hover,
+        .control-bar:not(p) .homebtn:hover
+        {
+    transition: 0.3s;
+  font-size : 1.5em;
+    opacity: 0.5;
+        
+}
+        
+.control-bar p{
+}
+
+
+
+.openbtn {
+  font-size: 1.4em;
+  cursor: pointer;
+  background-color: inherit;
+  color: white;
+  padding: 5px 5px;
+  border: none;
+  font-variant: small-caps;
+    float: left;
+    transition: 0.3s;
+}
+        
+        .homebtn{
+  font-size: 1.4em;
+  cursor: pointer;
+  background-color: inherit;
+  color: white;
+  padding: 5px 5px;
+  border: none;
+  font-variant: small-caps;
+    float: right;
+    transition: 0.3s;
+}
+        .homebtn a{
+            text-decoration: none;
+            color: white;
+        }
+        
+table.darkTable {
+  font-family: "Lato", Gadget, sans-serif;
+    font-variant: small-caps;
+  border: 2px solid #000000;
+  background-color: #515151;
+  width: 100%;
+  height: 50%;
+  text-align: center;
+  border-collapse: collapse;
+    margin-bottom: 1em;
+}
+table.darkTable td, table.darkTable th {
+  border: 1px solid #4A4A4A;
+  padding: 8px 2px;
+}
+table.darkTable tbody td {
+  font-size: 1em;
+  color: #E6E6E6;
+}
+table.darkTable tr:nth-child(even) {
+  background: #888888;
+}
+table.darkTable thead {
+  background: #000000;
+  border-bottom: 3px solid #000000;
+}
+table.darkTable thead th {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #E6E6E6;
+  text-align: center;
+  border-left: 2px solid #4A4A4A;
+}
+table.darkTable thead th:first-child {
+  border-left: none;
+}
+
+table.darkTable tfoot td {
+  font-size: 12px;
+}        
+
+</style>
+    
+    
+    <script type="text/javascript">
+        //using document ready...
+        $(document).ready(function(){
+
+            //initialising fullpage.js in the jQuery way
+            $('#fullpage').fullpage({
+                sectionsColor: ['#ff5f45', '#0798ec', '#fc6c7c', '#fec401'],
+                navigation: true,
+                slidesNavigation: true,
+            });
+
+            // calling fullpage.js methods using jQuery
+            $('#moveSectionUp').click(function(e){
+                e.preventDefault();
+                $.fn.fullpage.moveSectionUp();
+            });
+
+            $('#moveSectionDown').click(function(e){
+                e.preventDefault();
+                $.fn.fullpage.moveSectionDown();
+            });
+//            window.onscroll = function(){document.getElementById("mySidepanel").style.width = "0";});
+        });
+    </script>
+    
+    <script>
+        function openNav() {
+          document.getElementById("mySidepanel").style.width = "250px";
+        }
+
+        function closeNav() {
+          document.getElementById("mySidepanel").style.width = "0";
+        }
+         $(window).load(function() {
+		// Animate loader off screen
+		$(".se-pre-con").fadeOut("slow");;
+	});
+        
+        
+    </script>
+
+</head>
+<body>
+
+<!--
+<ul id="menu">
+    <li data-menuanchor="firstPage" class="active"><a href="#firstPage">First slide</a></li>
+    <li data-menuanchor="secondPage"><a href="#secondPage">Second slide</a></li>
+    <li data-menuanchor="3rdPage"><a href="#3rdPage">Third slide</a></li>
+</ul>
+
+<div id="actions">
+    <a id="moveSectionUp" href="#">moveSectionUp</a>
+    <a id="moveSectionDown" href="#">moveSectionDown</a>
+</div>
+-->
+    <!-- NAVBAR -->
+    
+    
+    
+    
+    <!-- END OF NAVBAR -->
+    
+    
+    <div class="se-pre-con"></div>  
+
+<div id="fullpage">    
+    
+    <div id="usa" class="section">
+    
+        <div class="">
+        
+            <div id="mySidepanel" class="sidepanel">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <h3 style="font-size: 2.3em;">Country : USA</h3>
+                <h3><a href="#">Dataset</a></h3>
+                <h3>Tweets ranging from 14th-16th April, 2016</h3>
+                <p>The Slider controls the change in date</p>
+<!--
+          <a href="#">Services</a>
+          <a href="#">Clients</a>
+          <a href="#">Contact</a>
+-->
+                
+                <div id="sidepanel-table">
+                <table class="darkTable">
+                    <thead>
+                    <tr>
+                    <th>Visualization</th>
+                    <th>Attributes</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                    <td>Word Cloud</td><td>Top 100 hashtags</td></tr>
+                    <tr>
+                    <td>Choropleth Map</td><td>Tweets per State</td></tr>
+                    <tr>
+                    <td>Donut Chart</td><td>Language of Tweets</td></tr>
+                    <tr>
+                    <td>Bar Chart</td><td>Tweets by time slots</td></tr>
+                    </tbody>
+                    </table>
+                </div>
+                <div>
+                
+                    <h3>Extension</h3>
+                </div>
+                <div id="switching">
+                
+                    <h3><a href="spain.html"><i class="fas fa-sign-in-alt"></i> Switch to SPAIN</a></h3>
+                
+                </div>
+                
+                
+        </div>
+        
+        <div class="control-bar col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <button class="openbtn" onclick="openNav()">☰ Control Panel</button>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <p style="text-align: center; color: white;font-variant:small-caps ">Distribution of Tweets over USA</p> 
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <button class="homebtn"><a href="index.html"><i class="fas fa-home"></i> Home</a></button>
+            </div>
+              
+        </div>
+        
+        
+        </div>
+        
+    <div class="container-fluid" id="main">    
+    
+        <div class="row" id="viz-container">
+            <div class = "align-items-center col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <div id = "cloud" ></div>
+            </div>
+            <div class = "col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
+
+                <div id="map" class="d3-geomap ">
+                </div>
+
+            </div>
+            <div id = "pie-container" class = "align-items-center col-lg-3 col-md-3 col-sm-3 col-xs-3">
+
+                <div id = "pie">
+                </div>
+
+            </div>
+
+
+        </div>
+    
+    
+        <div class="row" id="second-viz-container">
+            <div id = "bar-container" class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <div id="bar-chart">
+                </div>
+            </div>
+
+            <div id="slider-control" class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <div id="slider-step">
+                </div>
+            </div>
+
+            <div id = "list-container" class="pcol-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <div id = "list-chart">
+                </div>
+            </div>
+        </div>
+            
+        
+    
+        </div>
+        
+    </div>
+    
+    <div id="usa_extension" class="section">
+    
+    </div>
+    
+        
+        
+        
+</div>
+
+
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="https://unpkg.com/d3-simple-slider"></script>
+<!--<script src="//unpkg.com/d3@5.9.2/dist/d3.min.js"></script>-->
+    <script src="//unpkg.com/topojson@3.0.2/dist/topojson.min.js"></script>
+
+<script src="assets/scripts/d3-geomap.js"></script>
+<!--<script src="assets/d3cloud.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-cloud/1.2.5/d3.layout.cloud.js"></script>
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>-->   
+<script src="assets/scripts/choropleth.js"></script>
+<script src="assets/scripts/slider-control.js"></script>
+<script src="assets/scripts/pie.js"></script>
+<script src="assets/scripts/hashtag_data.js"></script>
+<script src="assets/scripts/word-cloud.js"></script>
+<script src="assets/scripts/process.js"></script>
+    
+    
+</body>
+</html>
