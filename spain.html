@@ -11,24 +11,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" /> 
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Lemonada|Raleway|Cookie|Great+Vibes|Handlee|Tangerine" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="sliding-navbar.css">
+<!--    <link rel="stylesheet" type="text/css" href="sliding-navbar.css">-->
     
+<!--
 
-    <!-- Font Awesome JS -->
+     Font Awesome JS 
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
-
-    
+    <link rel=“stylesheet” href=“https://use.fontawesome.com/releases/v5.5.0/css/all.css” integrity=“sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU” crossorigin=“anonymous”>
+-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.js"></script>
     
     <!--  End karmatek code-->
 
+<!--
     <link rel="stylesheet" type="text/css" href="assets/css/fullpage.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/examples.css" />
+-->
 	<script
   src="https://code.jquery.com/jquery-1.12.4.js"
   integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
   crossorigin="anonymous"></script>
-    <script type="text/javascript" src="assets/scripts/fullpage.js"></script>
+<!--    <script type="text/javascript" src="assets/scripts/fullpage.js"></script>-->
 
     <style>
     
@@ -77,34 +81,9 @@ table.darkTable tfoot td {
 </style>
     
     
-    <script type="text/javascript">
-        //using document ready...
-        $(document).ready(function(){
-
-            //initialising fullpage.js in the jQuery way
-            $('#fullpage').fullpage({
-                sectionsColor: ['#ff5f45', '#0798ec', '#fc6c7c', '#fec401'],
-                navigation: true,
-                slidesNavigation: true,
-            });
-
-            // calling fullpage.js methods using jQuery
-            $('#moveSectionUp').click(function(e){
-                e.preventDefault();
-                $.fn.fullpage.moveSectionUp();
-            });
-
-            $('#moveSectionDown').click(function(e){
-                e.preventDefault();
-                $.fn.fullpage.moveSectionDown();
-            });
-//            window.onscroll = function(){document.getElementById("mySidepanel").style.width = "0";});
-        });
-    </script>
-    
     <script>
         function openNav() {
-          document.getElementById("mySidepanel").style.width = "250px";
+          document.getElementById("mySidepanel").style.width = "30%";
         }
 
         function closeNav() {
@@ -143,7 +122,7 @@ table.darkTable tfoot td {
   <div class="se-pre-con"></div>    
     
 
-<div id="fullpage">    
+<div id="container-fluid">    
     
     <div id="spain" class="section">
     
@@ -151,10 +130,10 @@ table.darkTable tfoot td {
         
             <div id="mySidepanel" class="sidepanel">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-                <h3 style="font-size: 2.3em;">Country : SPAIN</h3>
-                <h3><a href="http://www.followthehashtag.com/datasets/spain_portugal/" target="_blank">Dataset</a></h3>
-                <h3>Tweets ranging from 14th-22nd April, 2016</h3>
-                <p>The Slider controls the change in date</p>
+                <h3 style="font-size: 2.3em;"><i class="fas fa-flag"></i> Country : SPAIN</h3>
+                <h3><a href="http://www.followthehashtag.com/datasets/spain_portugal/" target="_blank"><i class="fas fa-database"></i> Dataset</a></h3>
+                <h3><i class="fab fa-twitter"></i> Tweets ranging from 14th-22nd April, 2016</h3>
+                <p><i class="fas fa-sliders-h"></i> The Slider controls the change in date</p>
 <!--
           <a href="#">Services</a>
           <a href="#">Clients</a>
@@ -183,11 +162,12 @@ table.darkTable tfoot td {
                 </div>
                 <div>
                 
-                    <h3><a href="spain_map.html" target="_blank">Extension</a></h3>
+                    <h3 style="margin-bottom: -1em; padding-bottom: none;"><a href="spain_map.html" target="_blank"><i class="far fa-smile-beam"></i> Extension</a></h3>
+                    <p style="text-align: justify; padding: 1em; margin-top: -0.5em;">Projecting the spread of sentiment across a variety of tweets from the datasets. The visualization technique used is a map that is shaded with a distribution of colors based on a range of a particular feature. In this implementation, that feature is the sentiment and the range of the sentiment goes from very negative to very positive. The impact of using a choropleth map is to highlight insights of sentiment across the geographical map such as if the regions on the map that have the highest cluster of very positive or very negative sentiment.</p>
                 </div>
                 <div id="switching">
                 
-                    <h3><a href="usa.html"><i class="fas fa-sign-in-alt"></i> Switch to USA</a></h3>
+                    <h3 style="text-align: right;" class="fixed-switch"><a href="usa.html"><i class="fas fa-sign-in-alt"></i> Switch to USA</a></h3>
                 
                 </div>
                 
@@ -241,7 +221,7 @@ table.darkTable tfoot td {
                 </div>
             </div>
 
-            <div id="slider-control_spain" class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <div id="slider-control_spain" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                 <div id="slider-step_spain">
                 </div>
             </div>

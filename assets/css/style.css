@@ -5,6 +5,7 @@
     padding: 0;
 /*    box-sizing: border-box;*/
 /*    font-size: 11px;*/
+    overflow: hidden;
     
 }
 /*
@@ -55,19 +56,21 @@ body{
 #slider-step text{
     font-size: 1.2em;
 }
-.parameter-value text{
+#slider-step .parameter-value text{
     fill : black;
 /*    transform: rotate(-35deg);*/
 }
 
 #slider-step_spain .parameter-value text{
     fill : black;
-    transform: rotate(-35deg);
+    transform: rotate(-35deg) translate(-2em,0em);
+    font-size: 1em;
 }
 
 #slider-step_spain .tick text{
     fill : white;
     transform: rotate(-35deg);
+    font-size : 1em;
 }
 
 
@@ -378,3 +381,10 @@ left: 33.33%;
 	height: 100%;
 	z-index: 9999;
     background: url(../gif/twitter.gif) center no-repeat #111;}
+.fixed-switch {
+     position: absolute;
+    bottom: 00;
+/*    width: 100%;*/
+/*    z-index: 9999;*/
+    right: 0;
+}

@@ -2,17 +2,19 @@
 
 var sliderDiv = document.getElementById("slider-control");
 //console.log(pieDiv.clientHeight);
-var sliderWidth = sliderDiv.clientWidth;
+var sliderWidth = document.documentElement.clientWidth*0.30;
+console.log(sliderWidth);
+console.log(document.documentElement.clientWidth)
 var sliderHeight = document.documentElement.clientHeight*0.4;
 console.log(sliderWidth);
 //console.log(sliderHeight);
-var margin_left = sliderWidth*0.1;
+//var margin_left = sliderWidth*0.1;
  var data = [14,15,16];
   var sliderStep = d3
     .sliderBottom()
     .min(d3.min(data))
     .max(d3.max(data))
-    .width(sliderWidth*0.8)
+    .width(sliderWidth*0.6)
 //    .attr('transform', 'translate(' + "50" + ',' + "50" + ')')
     .tickFormat((function(d, i){
     return d + "th April 2016"}))
@@ -47,10 +49,10 @@ var margin_left = sliderWidth*0.1;
   var gStep = d3
     .select('div#slider-step')
     .append('svg')
-    .attr('width', sliderWidth*1.1)
+    .attr('width', sliderWidth*1)
     .attr('height', sliderHeight)
     .append('g')
-    .attr('transform', 'translate(' + sliderWidth*.15 + ',' + sliderHeight*0.5 + ')')
+    .attr('transform', 'translate(' + sliderWidth*.2 + ',' + sliderHeight*0.5 + ')')
   ;
 
   gStep.call(sliderStep);

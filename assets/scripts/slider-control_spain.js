@@ -2,7 +2,7 @@
 
 var sliderDiv_spain = document.getElementById("slider-control_spain");
 //console.log(pieDiv.clientHeight);
-var sliderWidth_spain = sliderDiv_spain.clientWidth;
+var sliderWidth_spain = document.documentElement.clientWidth*5/12;
 var sliderHeight_spain = document.documentElement.clientHeight*0.4;
 console.log(sliderWidth_spain);
 //console.log(sliderHeight);
@@ -12,7 +12,7 @@ var margin_left = sliderWidth_spain*0.1;
     .sliderBottom()
     .min(d3.min(data))
     .max(d3.max(data))
-    .width(sliderWidth_spain*0.8)
+    .width(sliderWidth_spain*0.6)
 //    .attr('transform', 'translate(' + "50" + ',' + "50" + ')')
     .tickFormat((function(d, i){
     return d + "th April 2016"}))
@@ -70,7 +70,7 @@ console.log(d3.select("#slider-step_spain"));
   var gStep = d3
     .select('div#slider-step_spain')
     .append('svg')
-    .attr('width', sliderWidth_spain*1.1)
+    .attr('width', sliderWidth_spain*1)
     .attr('height', sliderHeight_spain)
     .append('g')
     .attr('transform', 'translate(' + sliderWidth_spain*.15 + ',' + sliderHeight_spain*0.5 + ')')
