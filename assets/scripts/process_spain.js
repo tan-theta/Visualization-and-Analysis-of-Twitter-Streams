@@ -2,7 +2,7 @@
 
 var drawBar14_spain = function(selectedState){
     d3.select("#bar-chart_spain").selectAll("*").remove();
-  d3.csv('../../data/SPAIN/spain_hour_14.csv').then(function(data) {
+  d3.csv('~/data/SPAIN/spain_hour_14.csv').then(function(data) {
       console.log(data);
         data = data.filter(function(d) {
         return (d["State"]==selectedState);
@@ -130,7 +130,7 @@ drawBar14_spain("SPAIN");
 
 var drawBar15_spain = function(selectedState){
     d3.select("#bar-chart_spain").selectAll("*").remove();
-  d3.csv('../../data/SPAIN/spain_hour_15.csv').then(function(data) {
+  d3.csv('~/data/SPAIN/spain_hour_15.csv').then(function(data) {
       console.log(data);
         data = data.filter(function(d) {
         return (d["State"]==selectedState);
@@ -256,7 +256,7 @@ var margin = {top: 20, right: 30, bottom: 50, left: 50},
 
 var drawBar16_spain = function(selectedState){
     d3.select("#bar-chart_spain").selectAll("*").remove();
-  d3.csv('../../data/SPAIN/spain_hour_16.csv').then(function(data) {
+  d3.csv('~/data/SPAIN/spain_hour_16.csv').then(function(data) {
 
         data = data.filter(function(d) {
         return (d["State"]==selectedState);
@@ -382,7 +382,7 @@ var margin = {top: 20, right: 30, bottom: 50, left: 50},
 
 var drawBar17_spain = function(selectedState){
     d3.select("#bar-chart_spain").selectAll("*").remove();
-  d3.csv('../../data/SPAIN/spain_hour_17.csv').then(function(data) {
+  d3.csv('~/data/SPAIN/spain_hour_17.csv').then(function(data) {
 
         data = data.filter(function(d) {
         return (d["State"]==selectedState);
@@ -508,7 +508,7 @@ var margin = {top: 20, right: 30, bottom: 50, left: 50},
 
 var drawBar18_spain = function(selectedState){
     d3.select("#bar-chart_spain").selectAll("*").remove();
-  d3.csv('../../data/SPAIN/spain_hour_18.csv').then(function(data) {
+  d3.csv('~/data/SPAIN/spain_hour_18.csv').then(function(data) {
 
         data = data.filter(function(d) {
         return (d["State"]==selectedState);
@@ -634,7 +634,7 @@ var margin = {top: 20, right: 30, bottom: 50, left: 50},
 
 var drawBar19_spain = function(selectedState){
     d3.select("#bar-chart_spain").selectAll("*").remove();
-  d3.csv('../../data/SPAIN/spain_hour_19.csv').then(function(data) {
+  d3.csv('~/data/SPAIN/spain_hour_19.csv').then(function(data) {
 
         data = data.filter(function(d) {
         return (d["State"]==selectedState);
@@ -760,7 +760,7 @@ var margin = {top: 20, right: 30, bottom: 50, left: 50},
 
 var drawBar20_spain = function(selectedState){
     d3.select("#bar-chart_spain").selectAll("*").remove();
-  d3.csv('../../data/SPAIN/spain_hour_20.csv').then(function(data) {
+  d3.csv('~/data/SPAIN/spain_hour_20.csv').then(function(data) {
 
         data = data.filter(function(d) {
         return (d["State"]==selectedState);
@@ -886,7 +886,7 @@ var margin = {top: 20, right: 30, bottom: 50, left: 50},
 
 var drawBar21_spain = function(selectedState){
     d3.select("#bar-chart_spain").selectAll("*").remove();
-  d3.csv('../../data/SPAIN/spain_hour_21.csv').then(function(data) {
+  d3.csv('~/data/SPAIN/spain_hour_21.csv').then(function(data) {
 
         data = data.filter(function(d) {
         return (d["State"]==selectedState);
@@ -1012,7 +1012,7 @@ var margin = {top: 20, right: 30, bottom: 50, left: 50},
 
 var drawBar22_spain = function(selectedState){
     d3.select("#bar-chart_spain").selectAll("*").remove();
-  d3.csv('../../data/SPAIN/spain_hour_22.csv').then(function(data) {
+  d3.csv('~/data/SPAIN/spain_hour_22.csv').then(function(data) {
 
         data = data.filter(function(d) {
         return (d["State"]==selectedState);

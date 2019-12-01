@@ -23,7 +23,7 @@ var map = d3.choropleth()
 
 
 
-d3.csv('../data/USA/Data.csv').then(data => {
+d3.csv('~/data/USA/Data.csv').then(data => {
     map.draw(d3.select("#map").datum(data));
 });
 
@@ -46,7 +46,7 @@ var redraw = function(selectedDate){
     .format(d3.format(',.0f'))
     .valueScale(d3.scaleLinear);
 
-d3.csv('../../data/USA/Data.csv').then(data => {
+d3.csv('~/data/USA/Data.csv').then(data => {
     map.draw(d3.select("#map").datum(data));
 });
 };
