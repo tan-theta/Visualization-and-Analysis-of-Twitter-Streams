@@ -10,6 +10,7 @@
 	<script src="bootstrap.min.js"></script>	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
 	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" /> 
 
 
 
@@ -22,8 +23,8 @@
 		}
 		.mesh {
 			fill: none;
-			stroke: lightgrey;
-			stroke-width: 2px;
+			stroke: white;
+			stroke-width: 1px;
 			stroke-linejoin: round;
 		}
 		h1 {
@@ -38,37 +39,65 @@
 		}
 
 		h1{
-			font-family: 'Raleway', sans-serif;
+			font-family: 'Lato', sans-serif;
 			font-weight: 700;
 		}
+        
+        body{
+            font-family: 'Lato';
+            
+            background-image: linear-gradient(90deg, #f6d365 0%, #fda085 100%);
+            overflow: hidden;
+        }
 
 	</style>
 </head>
 <body>
+    <div class="container-fluid">
+        <div class="row">
+            
+            <div class="col-lg-12">
+                <h1 style="text-align: center; font-variant: small-caps;">Sentiment Analysis - United States of America</h1>
+            </div>
 
-	<h1>Sentiment Analysis  - United States of America</h1>
+        </div>
+    
+        <div class="row">
+            
+            <div class="col-lg-12">
+                
+                <div class ="center" id="svgDiv">
+                </div>
+            
+            </div>
 
-	<div class="container">
-		<div class="col-sm">
-			<div class ="center" id="svgDiv"></div>
-
-			<div class="col-sm">
-				<div class = "center" id="pieDiv"></div>
-			</div>
 		</div>
+        
     </div>
+        
+        
+        
+
+
+    
+    
+    
+   
+	
 
 		<script type="text/javascript">
 
-			var w = window.innerWidth;
-			var h = window.innerHeight/2;
+			var w = document.documentElement.clientWidth;
+			var h = document.documentElement.clientHeight;
+            
+            console.log(h);
 
 			var width = w,
 			height = h;
-
-			var pos_num = 0;
-			var neut_num = 0;
-			var neg_num = 0;
+//
+//			var pos_num = 0;
+//			var neut_num = 0;
+//			var neg_num = 0;
 
 // set projection
 var projection = d3.geoMercator();
@@ -81,13 +110,14 @@ var path = d3.geoPath()
 //sentiment color scale	
 var color_scale = d3.scaleLinear()
 .domain([-1, 0, 1])
-.range(["red", "white", "green"]);
+.range(["red", "white", "rgb(69, 255, 0)"]);
 
 
 // create svg variable
 var svg = d3.select("#svgDiv").append("svg")
 .attr("width", width)
 .attr("height", height);
+            
 
 // Color legend.
 var legend = d3.legendColor()
@@ -96,7 +126,7 @@ var legend = d3.legendColor()
 .labels(["Very Negative", "Negative", "Neutral", "Positive", "Very Positive"]);
 
 svg.append("g")
-.attr("transform", "translate(1000,300)")
+.attr('transform', 'translate(' + width/2 + ',' + height/2 + ')')
 .call(legend);
 
 
@@ -108,15 +138,17 @@ d3.json("us.json").then(function(topo) {
 
   	// set projection parameters
   	projection
-  	.scale(700)
-  	.center([-106, 37.5]);
+  	.scale(height)
+  	.center([-106,40])
+//  	.translate([1,1])
+    ;
 
 	// add states from topojson
 	svg.selectAll("path")
 	.data(states).enter()
 	.append("path")
 	.attr("class", "feature")
-	.style("fill", "rgb(245,245,245)")
+	.style("fill", "rgba(0, 0, 0, 0.79)")
 	.attr("d", path);
 
     // put border around states 
@@ -125,32 +157,7 @@ d3.json("us.json").then(function(topo) {
     .attr("class", "mesh")
     .attr("d", path);
 
-    //function to count the tweets
-    function tweet_counter(src){
-
-    	d3.csv(src, function(d){
-
-    		if(d['sentiment'] == 0){
-    			neut_num++;
-    		}
-    		else if(d['sentiment'] > 0){
-    			pos_num++;
-    		}
-    		else{
-    			neg_num++;
-    		}
-    	})
-
-    	mydata = [{"label":"Positive Sentiment", "value":pos_num}, 
-    	{"label":"Neutral", "value":neut_num}, 
-    	{"label":"Negative Sentiment", "value":neg_num}];
-
-    	localStorage.setItem("pie_data",  mydata);
-	  // Retrieve
-	  console.log("fetched data " + localStorage.getItem("pie_data"));
-
-
-	}
+    
     // function to draw circles
     function update_circles_us(src){
     	var data_t = []
@@ -169,7 +176,7 @@ d3.json("us.json").then(function(topo) {
     		.append("circle")
     		.attr("cx", function (d) { return projection(d)[0]; })
     		.attr("cy", function (d) { return projection(d)[1]; })
-    		.attr("r", "8px")
+    		.attr("r", "3.5px")
     		.attr("fill", function(d){color = color_scale(d[2]); return color; } )
     		.attr("fill-opacity", 0.7)
     	});
@@ -177,13 +184,11 @@ d3.json("us.json").then(function(topo) {
 
     var count = 1;
 
-    tweet_counter("data/extension/clean_us_0.csv");
+//    tweet_counter("data/extension/clean_us_0.csv");
     update_circles_us("data/extension/clean_us_0.csv");
-    pos_num = 0;
-    neut_num = 0;
-    neg_num = 0;
+   
 
- 	var delayInMilliseconds = 5000; //5 seconds
+ 	var delayInMilliseconds = 1000; //5 seconds
 
 	var count = 1;                  //  set your counter to 1
 
@@ -196,11 +201,11 @@ d3.json("us.json").then(function(topo) {
 
 			count++;  
 
-			tweet_counter(src_string);
+//			tweet_counter(src_string);
 			update_circles_us(src_string);
-			pos_num = 0;
-			neut_num = 0;
-			neg_num = 0;
+//			pos_num = 0;
+//			neut_num = 0;
+//			neg_num = 0;
 
 		    if (count < 33) {         //  if the counter < number of datasets, call the loop function
 		    	myLoop();            //    again which will trigger another 
