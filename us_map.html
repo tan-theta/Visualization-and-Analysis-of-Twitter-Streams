@@ -126,7 +126,7 @@ var legend = d3.legendColor()
 .labels(["Very Negative", "Negative", "Neutral", "Positive", "Very Positive"]);
 
 svg.append("g")
-.attr('transform', 'translate(' + width/2 + ',' + height/2 + ')')
+.attr('transform', 'translate(' + width/1.7 + ',' + height/2 + ')')
 .call(legend);
 
 
@@ -139,8 +139,8 @@ d3.json("us.json").then(function(topo) {
   	// set projection parameters
   	projection
   	.scale(height)
-  	.center([-106,40])
-//  	.translate([1,1])
+  	.center([0,40])
+    .translate([width / 0.9, height / 3.2])
     ;
 
 	// add states from topojson
@@ -217,7 +217,7 @@ d3.json("us.json").then(function(topo) {
 		}, delayInMilliseconds)
 	}
 
-	myLoop();  
+//	myLoop();  
 
 
 
